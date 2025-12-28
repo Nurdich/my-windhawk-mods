@@ -17,11 +17,28 @@ It provides the same functionality without requiring Windhawk to be installed.
 - Windows 10/11 (x64)
 - Visual Studio 2019 or later (for building)
 - CMake 3.20 or later
+- Windows SDK with Debugging Tools (for symbol server support)
 - [Everything](https://www.voidtools.com/) (optional, for fast folder size calculation)
 
 ## Building
 
-### Using Visual Studio Developer Command Prompt
+### Step 1: Setup Symbol Server Files
+
+The folder size feature requires Windows debug symbols. Run this first:
+
+```batch
+setup_symbols.bat
+```
+
+This copies `dbghelp.dll` and `symsrv.dll` from Windows SDK to the build directory.
+
+**Note:** If you don't have Windows SDK installed:
+1. Download from: https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+2. During installation, select "Debugging Tools for Windows"
+
+### Step 2: Build
+
+Using Visual Studio Developer Command Prompt
 
 1. Open "x64 Native Tools Command Prompt for VS 2022" (or similar)
 2. Navigate to the `standalone` directory

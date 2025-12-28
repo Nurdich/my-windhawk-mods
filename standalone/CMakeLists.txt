@@ -38,7 +38,6 @@ target_link_libraries(BetterFileSizesHook PRIVATE
     propsys
     shell32
     shlwapi
-    dbghelp
     psapi
 )
 
