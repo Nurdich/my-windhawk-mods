@@ -39,6 +39,7 @@ target_link_libraries(BetterFileSizesHook PRIVATE
     shell32
     shlwapi
     dbghelp
+    psapi
 )
 
 # Injector executable
